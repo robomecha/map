@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>다음 지도 API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="map"></div>
+
+    <button id="openPopupBtn" class="btn">입력</button>
+
+    <div id="popup" class="popup">
+        <h2>데이터 입력</h2>
+        <div class="form-group">
+            <label for="address">주소</label>
+            <input type="text" id="address" name="address" placeholder="주소를 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="customData">데이터</label>
+            <input type="text" id="customData" name="customData" placeholder="데이터를 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="extraData">추가 데이터</label>
+            <input type="text" id="extraData" name="extraData" placeholder="추가 데이터를 입력하세요">
+        </div>
+        <div class="form-group">
+            <label for="color">색상</label>
+            <input type="color" id="color" name="color" value="#808080"> <!-- 초기값 회색 -->
+        </div>
+        <button id="submitBtn" class="btn">완료</button>
+    </div>
+
+    <div id="colorPickerPopup" class="popup">
+        <h2>색상 변경</h2>
+        <input type="color" id="newColor" name="newColor" value="#808080"><br> <!-- 초기값 회색 -->
+        <button id="applyColorBtn" class="btn">적용</button>
+    </div>
+
+    <div id="contextMenu">
+        <ul>
+            <li id="deleteBtn">삭제</li>
+            <li id="editBtn">편집</li>
+        </ul>
+    </div>
+
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1952b6766a504662ea1195fe4fb75388&libraries=services,drawing"></script>
+    <script src="script.js"></script>
+</body>
+</html>
